@@ -1,2 +1,2 @@
 Hello there, This is ai_barcaboy
-![Image description](/images/jekyll-logo.jpg)
+![Image description](/images/jekyll-logo.png)
