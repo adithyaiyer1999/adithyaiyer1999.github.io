@@ -1,4 +1,7 @@
-## A European Expedition by Adithya Iyer @ DTU Denmark
+---
+layout: post
+title: A European Expedition!
+---
 
 As a Dual Degree student, if there is one thing we don't lack, it's time. Time to decipher what we want to do while our Btech batchmates face the tsunami that is placement season. I knew in the beginning of my 5th semester that one thing I craved for was change, to look beyond the institute's walls and the stresses that come with the academics within. That coupled with the lifetime goal of watching Messi and Busquets rolling the ball for FC Barcelona at the Camp Nou, an exchange didn't seem like a bad idea .A semester away from campus would get me that required change in perspective, so I jumped on the bandwagon of browsing through the list of universities IITB had affiliations with.
 
