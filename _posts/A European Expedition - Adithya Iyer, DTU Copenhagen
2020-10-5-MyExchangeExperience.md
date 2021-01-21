@@ -45,6 +45,3 @@ As the return flight approached, and I had my bag packed with Chocolates and sou
 If there's one takeaway from my story, it's this- Go on an exchange if you can, you won't regret it. Maybe to see how different people and places can be. Or maybe to see how similar they are. One thing's for sure, you won't come back without unforgettable memories.
  
 
-
-
-![Image of me](/images/jekyll-logo.png)
