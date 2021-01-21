@@ -16,6 +16,10 @@ I'm also an avid FC Barcelona fanm and watched the Champions league game between
 
 I'm also involved in hostel football team, and the IITB Debating Society!
 
+PS: We are now also officially 3rd in the Copernicus Masters University Challenge!
+
+![Image of me](/images/CopMa_label-UNI3rd_2020.png)
+
 
 ### Contact me
 
