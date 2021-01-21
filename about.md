@@ -18,7 +18,7 @@ I'm also involved in hostel football team, and the IITB Debating Society!
 
 PS: We are now also officially 3rd in the Copernicus Masters University Challenge!
 
-![Badge](/images/CopMa_label-UNI3rd_2020.png)
+![Badge](CopMa_label-UNI3rd_2020.png)
 
 
 ### Contact me
