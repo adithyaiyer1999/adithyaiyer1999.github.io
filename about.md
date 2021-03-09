@@ -23,4 +23,4 @@ PS: We are now also officially 3rd in the Copernicus Masters University Challeng
 
 ### Contact me
 
-[adithyaiyer1999@gmail.com](mailto:email@domain.com)
+[adithyaiyer1999@gmail.com](mailto:adithyaiyer1999@gmail.com)
