@@ -5,9 +5,9 @@ permalink: bookreviews
 
 
 <div class="posts">
-  {% for post in site._bookreviews %}
+  {% for post in site.bookreviews %}
     <article class="post">
-
+      <h1> I </h1>
       <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
 
       <div class="entry">
