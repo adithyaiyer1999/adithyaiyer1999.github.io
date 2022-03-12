@@ -40,7 +40,9 @@ Talking about work-life balance at McKinsey, I think many other blogs and posts 
 
 I could cope with the workload, largely because of being used to situations like these in university, but I did not see it as being something which was sustainable. I think the biggest learning for me was this- no one will draw the line for you, you will need to be upfront about it. The biggest skill I learnt at McKinsey was prioritization and the 80-20 rule, i.e. to do less work while maximizing outputs. I think the consulting industry is probably going to need to solve for this in the near future, because young associates have far more lucrative offers on the plate today than they did 10 years ago because of startups and the tech industry in general. Either they normalize work life balance, or find themselves facing a massive churn in employees. The "Great Resignation" has already seen MBBs publically call out for more candidates, but I think a cultural shift on work-life balance at MBBs is what will solve the root of the problem.
 
+
  # Part 3: Why I left, and what next
+
 
  I submitted my resignation on Jan 7th' 2022. 6 months into my job. My last working day was in the first week of March. I sort of knew in December that I was going to quit, for largely 2 reasons-
 
