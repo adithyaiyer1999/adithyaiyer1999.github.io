@@ -44,7 +44,7 @@ I could cope with the workload, largely because of being used to situations like
  # Part 3: Why I left, and what next
 
 
- I submitted my resignation on Jan 7th' 2022. 6 months into my job. My last working day was in the first week of March. I sort of knew in December that I was going to quit, for largely 2 reasons-
+ I submitted my resignation on Jan 7th 2022. 6 months into my job. My last working day was in the first week of March. I sort of knew in December that I was going to quit, for largely 2 reasons-
 
  1. I was heading back into academia for my masters in August'22, so a few months between McKinsey and my masters focused on research did not seem like a bad idea.
  2. I needed a change - I realized consulting isn't for everyone.
