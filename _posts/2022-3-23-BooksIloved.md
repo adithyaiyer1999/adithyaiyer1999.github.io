@@ -3,7 +3,7 @@ layout: post
 title: Books that most inspired me
 ---
 
-I've had far too many people who have asked me for book reccommendations, and the everpresent question- "Which book should I start reading if I want to develop a reading habit?". This post/blog lists down the books which most shaped my reading habits and preferences. A good chunk of these could be ones which I read when I was a teen, but I think that was when I figured out what genre I loved the most, what writing style I preferred and which authors I found most inspiring. I've read faar too much non-fiction in the last 5 years (univ days), so tread with caution if my state of mind in uni influences these books. I love fantasy as a genre- so take my praise for fantasy authors with a pinch of salt, I cannot stop talking fantasy series. I'll break it down into genres(5 for each), for easy stratification. 
+I've had far too many people who have asked me for book recommendations, and the ever present question- "Which book should I start reading if I want to develop a reading habit?". This post/blog lists down the books which most shaped my reading habits and preferences. A good chunk of these could be ones which I read when I was a teen, but I think that was when I figured out what genre I loved the most, what writing style I preferred and which authors I found most inspiring. I've read far too much non-fiction in the last 5 years (univ days), so tread with caution if my state of mind in uni influences these books. I love fantasy as a genre- so take my praise for fantasy authors with a pinch of salt, I cannot stop talking fantasy series. I'll break it down into genres(5 for each), for easy stratification. 
 
 # Fiction - Solo Books
 
@@ -40,7 +40,7 @@ I've had far too many people who have asked me for book reccommendations, and th
  Too cliche, but I actually loved this. Totally changes the way you think.
 
 6. Think Again - Adam Grant
- Adam Grant is an incredible writer, so had to make space for his best book according to me. It tells you that the age old idea of sticking to your principles passed on through generations is proper BS. He is very academic in his writing, but backs up his points with data brilliantly.
+ Adam Grant is an incredible writer, so had to make space for his best book according to me. It tells you that the age old idea of sticking to your principles passed on through generations is proper BS. He is very academic in his writing, and backs up his points with data brilliantly.
 
 # Autobiographies/Biographies
 
@@ -48,7 +48,7 @@ I've had far too many people who have asked me for book reccommendations, and th
  Best autobiography acc to me. He writes well, and he has a story worth the writing. It's not the story of how Nike was built, its the story of how you puch yourself to your maximum. Must read autobiography.
 
 2. Hit Refresh - Satya Nadella
- Satya Nadella is the reason Microsoft is back, he's an incredible businessman. He's an even more incredible human being. Think refresh is hist story of how empathy changed his worldview of business and why empathy is what we need going on. It's very different from most buigraphies in terms of focus- and that is what makes it an incredible read. He's genuine and to the point, and makes you re-prioritize what a business should value.
+ Satya Nadella is the reason Microsoft is back, he's an incredible businessman. He's an even more incredible human being. Think refresh is his story of how empathy changed his worldview of business and why empathy is what we need going on. It's very different from most buigraphies in terms of focus- and that is what makes it an incredible read. He's genuine and to the point, and makes you re-prioritize what a business should value.
 
 3. The Code Breaker - Walter Issacsson
  Follows the story of Jennifer Doudna, inventor of CRISPR and Nobel Winner. Talks about how academia works and how major scientific discoveries actually happen (it's not lightbulb moments). It's also more relevant, since most of the story happens in the 2010's. 
@@ -64,7 +64,7 @@ I've had far too many people who have asked me for book reccommendations, and th
 I'll have tonnes of fantasy reccos later, bear with me for this tiny detour.
 
 1. Alex Rider Series - Anthony Horowitz
- As a child, anyone who has ever read Alex Rider wants to be Alex Rider. He's cool, somewhat clueless, an action hero and a teenager playing James Bond. Chilhood defining book series. Don't think many characters are so well written(Scorpia too is a brilliant read from a villain's perspective) .
+ As a child, anyone who has ever read Alex Rider wants to be Alex Rider. He's cool, somewhat clueless, an action hero and a teenager playing James Bond. Childhood defining book series. Don't think many characters are so well written(Scorpia too is a brilliant read from a villain's perspective) .
 
 2. Young Samurai - Chris Bradford
  I fell in love with Japan when I completed this 8 part series. It's about ninjas, samurai and all the other cool Naruto stuff, but better. By far the most underrated series, too few people know about this.
@@ -92,7 +92,7 @@ Welcome to my favourite genre. Books here are traditionally 500-1000 pages, but 
  Amish deserves a mention for bringing quality into indian literature and maintaining it. Incredible concepts which the bhakts would probably love. He talks a lot of philosophy without imposing it. Its humble, beautiful and the second best Indian series for me.
 
 6. Ram Chandra Series - Amish Tripathi
- Ok I'm not a bhakt, but this is for me the best Indian fantasy writing I've read. Scion of Ikshvaku and Sita are okay reads for this novel. Raavan is one of the best book I've read by any author- indian or not. You sympathize more with Raavan that with Ram or Sita to the dissappointment of your parents, but that's how brilliant the storytelling for the third book is. Hats off to Amish.
+ Ok I'm not a bhakt, but this is for me the best Indian fantasy writing I've read. Scion of Ikshvaku and Sita are okay reads for this series. Raavan is one of the best book I've read by any author- Indian or not. You sympathize more with Raavan that with Ram or Sita to the dissappointment of your parents, but that's how brilliant the storytelling for the third book is. Hats off to Amish.
 
 TOP 3 INCOMING -----------------
 
@@ -100,16 +100,15 @@ TOP 3 INCOMING -----------------
  Eragon, Eldest and Brisingr made me want to write a novel myself. Paolini was 17 when he wrote Eragon. I think I visited the library everyday for 15 days enquiring if the 4th book had arrived. It was that good then. Childhood defining.
 
 8. Mistborn - Brandon Sanderson
- Fantasy nerds love Brandon Sanderson. I fell in love with fantasy after probably a 3 year break with Mistborn- the final empire. It's soo well written, the characters and the magic universe perfectly complement each other. Must read fantasy.
+ Fantasy nerds love Brandon Sanderson. I fell in love with fantasy after probably a 3 year break with Mistborn- the final empire. It's so well written, the characters and the magic universe perfectly complement each other. Must read fantasy.
 
- Notable mentions - Percy Jackson(Skipped because it got repetitive), Skullduggery Pleasant (because it stopped being fun after book 2), Famous 5/secret 7( for being too childish), Lord of The rings (for being too old school for me, although)........
+ Notable mentions - Percy Jackson(Skipped because it got repetitive), Skullduggery Pleasant (because it stopped being fun after book 2), Famous 5/secret 7( for being too childish), Lord of The rings (for being too old school for me)........
 
 9. Stormlight Archive - Brandon Sanderson
  He's now probably a fiction superstar writer. Characters are key. If you fall in love with a character, you fall in love with the arc and then you fall in love with the book. Kaladin Dalinar and Shallan are impeccable. Each book is probably 1000 pages, but worth every page. Enough said.
 
 
 There you go. 
-
 
 
 
