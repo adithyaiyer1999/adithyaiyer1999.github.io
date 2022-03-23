@@ -94,15 +94,15 @@ Welcome to my favourite genre. Books here are traditionally 500-1000 pages, but 
 6. Ram Chandra Series - Amish Tripathi:
  Ok I'm not a bhakt, but this is for me the best Indian fantasy writing I've read. Scion of Ikshvaku and Sita are okay reads for this series. Raavan is one of the best book I've read by any author- Indian or not. You sympathize more with Raavan that with Ram or Sita to the dissappointment of your parents, but that's how brilliant the storytelling for the third book is. Hats off to Amish.
 
-TOP 3 INCOMING -----------------
+# TOP 3 INCOMING -----------------
 
 7. Inheritance Series- Cristopher Paolini:
  Eragon, Eldest and Brisingr made me want to write a novel myself. Paolini was 17 when he wrote Eragon. I think I visited the library everyday for 15 days enquiring if the 4th book had arrived. It was that good then. Childhood defining.
 
 8. Mistborn - Brandon Sanderson:
- Fantasy nerds love Brandon Sanderson. I fell in love with fantasy after probably a 3 year break with Mistborn- the final empire. It's so well written, the characters and the magic universe perfectly complement each other. Must read fantasy.
+  Fantasy nerds love Brandon Sanderson. I fell in love with fantasy after probably a 3 year break with Mistborn- the final empire. It's so well written, the characters and the magic universe perfectly complement each other. Must read fantasy.
 
- Notable mentions - Percy Jackson(Skipped because it got repetitive), Skullduggery Pleasant (because it stopped being fun after book 2), Famous 5/secret 7( for being too childish), Lord of The rings (for being too old school for me)........
+  Notable mentions - Percy Jackson(Skipped because it got repetitive), Skullduggery Pleasant (because it stopped being fun after book 2), Famous 5/secret 7( for being too childish), Lord of The rings (for being too old school for me)........
 
 9. Stormlight Archive - Brandon Sanderson:
  He's now probably a fiction superstar writer. Characters are key. If you fall in love with a character, you fall in love with the arc and then you fall in love with the book. Kaladin Dalinar and Shallan are impeccable. Each book is probably 1000 pages, but worth every page. Enough said.
