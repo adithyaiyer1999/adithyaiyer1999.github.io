@@ -43,6 +43,7 @@ You'd be missed Roger, all the best.
 
 
 
+PS : I've previously worked with folks at RoundPe, and they've got an incredible crypto product. There's a donation link which you can create for any blog you write, mine looks like this : https://payment.roundpe.com/donations/adiBlog . Feedback on product appreciated as well.
 
 
 
