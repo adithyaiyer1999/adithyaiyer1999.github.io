@@ -4,27 +4,18 @@ title: About
 permalink: /about/
 ---
 
-A list of stuff I've worked on is mentioned below!
+I'm a first year Master's student at NYU's Courant Institute of Mathematical Sciences focused on Applied Mathematics and Scientific Computing.
 
-### Personal Information
+I primarily interested professionally in Computer Vision and Computational Statistics.
 
-I graduated from Indian Institute of Technology Bombay, majoring in Material Science and Engineering.
+I've previously worked in Computational Materials Science research with Prof M.P. Gururajan and Prof Hina Gokhale at the Indian Institute of Technology Bombay (IIT Bombay), which resulted in my [thesis](https://adithyaiyer1999.github.io/AdithyaIyer_Thesis.pdf) and a paper [here](https://link.springer.com/article/10.1007/s12046-022-02036-5). We've also created the first computer vision based python library to track binary microstructures and perform statistical analysis (correlations, precipitate counts/growth etc.) titled MiST. The library for mist with a tutorial can be found [here](https://github.com/adithyaiyer1999/mist).
 
-I then spent 8 months working as an Associate consultant/Analyst at McKinsey & Company, at their risk practice, in the sub group Risk Dynamics. 
+I've also been involved with the European Space Agency's Copernicus Accelerator, where we attempted to solve agricultural problems with remote sensing. More information about us can be found [here](https://accelerator.copernicus.eu/portfolio/budnip/#:~:text=Budnip%20uses%20Copernicus%20Sentinel%20data,indicate%20a%20crop%20disease%20outbreak.&text=Budnip%20was%20the%20winning%20team,Copernicus%20Masters%20University%20Challenge%202020.)
+We were officially 3rd in the Copernicus Masters University Challenge!
 
-I'm presently back at IIT Bombay working with the computational Materials Science group as a research assistant.
+![Badge](/images/CopMa_label-UNI3rd_2020.png)
 
-My interest generally encompasses computational statistics and Machine learning. I've also been a part of the flagship Copernicus Accelerator by the European Space Agency, and am about to complete our first year under incubation. Suffice to say, Remote Sensing, specifically from Sentinel satellites and application of Deep learning on them is of great interest to me. More information can be found [here](https://accelerator.copernicus.eu/portfolio/budnip/#:~:text=Budnip%20uses%20Copernicus%20Sentinel%20data,indicate%20a%20crop%20disease%20outbreak.&text=Budnip%20was%20the%20winning%20team,Copernicus%20Masters%20University%20Challenge%202020.)
+I'm also an avid follower of FC Barcelona, and have travelled over 15 countries, and have stayed in Europe for a semester on exchange too!
 
-I'm also an avid FC Barcelona fanm and watched the Champions league game between FC Barcelona and Borussia Dortmund live at the Nou Camp. I was also an exchange student from IITB to the Technical Institute of Denmark(DTU) for the Fall semester'2019. I also managed to spend significant time travelling across the EU in my time there, and managed to visit over 15 countries.
+Feel free to ping me anytime!
 
-I'm also involved in hostel football team, and the IITB Debating Society!
-
-PS: We are now also officially 3rd in the Copernicus Masters University Challenge!
-
-![Badge](CopMa_label-UNI3rd_2020.png)
-
-
-### Contact me
-
-[adithyaiyer1999@gmail.com](mailto:adithyaiyer1999@gmail.com)
