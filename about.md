@@ -4,11 +4,15 @@ title: About
 permalink: /about/
 ---
 
-I'm a second year Master's student at NYU's Courant Institute of Mathematical Sciences focused on Applied Mathematics and Machine Learning (specifically representation learning). I am also a research assistant at Prof Saining Xie's computer vision lab at NYU.
+May-24-Present : Founding Researcher @ Morphic (https://studio.morphic.com/) : Making Video Models work so artists can make movies quickly and with EXTREME control. Reach out if you're interested in working on Video with us!
 
-Lately - I worked as an Applied Research Intern at eBay in their Seattle office. I also dabble with ML libraries and some cool applications, checkout my github for it. 
+Till May'24 : I was a Master's student at NYU's Courant Institute of Mathematical Sciences focused on Applied Mathematics and Machine Learning (specifically representation learning). I am also a research assistant at Prof Saining Xie's computer vision lab at NYU. We launched Cambrian-1 while I was at NYU (https://arxiv.org/abs/2406.16860) and largely worked on Diffusion Model optimization in Jax.
 
-I've previously worked in Computational Materials Science research with Prof M.P. Gururajan and Prof Hina Gokhale at the Indian Institute of Technology Bombay (IIT Bombay), which resulted in my [thesis](https://adithyaiyer1999.github.io/AdithyaIyer_Thesis.pdf) and a paper [here](https://link.springer.com/article/10.1007/s12046-022-02036-5). We've also created the first computer vision based python library to track binary microstructures and perform statistical analysis (correlations, precipitate counts/growth etc.) titled MiST. The library for mist with a tutorial can be found [here](https://github.com/adithyaiyer1999/mist).
+Summer'23:  I worked as an Applied Research Intern at eBay in their Seattle office. I also dabble with ML libraries and some cool applications, checkout my github for it. 
+
+Till July'22 : Was grinding at McKinsey & Co. Helps banks make more money than they already have.
+
+Till June'21 : I've previously worked in Computational Materials Science research with Prof M.P. Gururajan and Prof Hina Gokhale at the Indian Institute of Technology Bombay (IIT Bombay), which resulted in my [thesis](https://adithyaiyer1999.github.io/AdithyaIyer_Thesis.pdf) and a paper [here](https://link.springer.com/article/10.1007/s12046-022-02036-5). We've also created the first computer vision based python library to track binary microstructures and perform statistical analysis (correlations, precipitate counts/growth etc.) titled MiST. The library for mist with a tutorial can be found [here](https://github.com/adithyaiyer1999/mist).
 
 I've also been involved with the European Space Agency's Copernicus Accelerator, where we attempted to solve agricultural problems with remote sensing. More information about us can be found [here](https://accelerator.copernicus.eu/portfolio/budnip/#:~:text=Budnip%20uses%20Copernicus%20Sentinel%20data,indicate%20a%20crop%20disease%20outbreak.&text=Budnip%20was%20the%20winning%20team,Copernicus%20Masters%20University%20Challenge%202020.)
 We were officially 3rd in the Copernicus Masters University Challenge.
