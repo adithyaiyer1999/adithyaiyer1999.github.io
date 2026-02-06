@@ -18,16 +18,14 @@ permalink: /blog/
       <span class="read-time">{{ post.content | number_of_words | divided_by: 200 | plus: 1 }} min</span>
     </div>
     <h2 class="post-title">{{ post.title }}</h2>
-    <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 160 }}</p>
+    <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 140 }}</p>
   </a>
   {% endfor %}
 </div>
 
 <style>
 .blog-header {
-  margin-bottom: 1.5rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid #3c3c3c;
+  margin-bottom: 2rem;
 }
 
 .page-title {
@@ -47,21 +45,17 @@ permalink: /blog/
 .posts {
   display: flex;
   flex-direction: column;
-  gap: 0;
 }
 
 .post-card {
   display: block;
-  padding: 1rem 0;
-  border-bottom: 1px solid #3c3c3c;
+  padding: 1.25rem 0;
   text-decoration: none;
-  transition: background 0.15s ease;
+  border-bottom: 1px solid #2d2d2d;
 }
 
-.post-card:hover {
-  background: #252526;
-  margin: 0 -1rem;
-  padding: 1rem;
+.post-card:last-child {
+  border-bottom: none;
 }
 
 .post-card:hover .post-title {
@@ -72,12 +66,9 @@ permalink: /blog/
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.5rem;
+  font-family: 'JetBrains Mono', monospace;
   font-size: 0.7rem;
-  color: #858585;
-}
-
-.post-date {
   color: #858585;
 }
 
@@ -85,40 +76,30 @@ permalink: /blog/
   color: #3c3c3c;
 }
 
-.read-time {
-  color: #858585;
-}
-
 .post-title {
   font-family: 'Outfit', sans-serif;
-  font-size: 0.95rem;
-  font-weight: 500;
+  font-size: 1rem;
+  font-weight: 600;
   color: #d4d4d4;
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.5rem;
   transition: color 0.15s ease;
   line-height: 1.4;
 }
 
 .post-excerpt {
   color: #858585;
-  font-size: 0.8rem;
-  line-height: 1.5;
+  font-size: 0.85rem;
+  line-height: 1.6;
   margin: 0;
 }
 
-/* Mobile */
 @media screen and (max-width: 768px) {
-  .page-title {
-    font-size: 1.1rem;
-  }
-  
-  .post-card:hover {
-    margin: 0;
-    padding: 1rem 0;
-  }
-  
   .post-title {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+  }
+  
+  .post-excerpt {
+    font-size: 0.8rem;
   }
 }
 </style>
