@@ -1,27 +1,29 @@
 ---
 layout: default
-title: Book Reviews
-permalink: /bookreviews/
+title: Blog
+permalink: /blog/
 ---
 
 <div class="blog-header">
   <h1 class="page-title">
-    <span class="title-prefix">~/book-reviews</span>
+    <span class="title-prefix">~/blog</span>
     <span class="cursor">_</span>
   </h1>
-  <p class="page-subtitle">Thoughts on books I've read</p>
+  <p class="page-subtitle">Thoughts on tech, books, running, and life</p>
 </div>
 
 <div class="posts">
-  {% for post in site.bookreviews %}
+  {% for post in site.posts %}
   <a href="{{ site.baseurl }}{{ post.url }}" class="post-card animate-in">
     <div class="post-meta">
       <span class="post-date">{{ post.date | date: "%b %d, %Y" }}</span>
+      <span class="meta-separator">//</span>
+      <span class="read-time">{{ post.content | number_of_words | divided_by: 200 | plus: 1 }} min read</span>
     </div>
     <h2 class="post-title">{{ post.title }}</h2>
     <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 200 }}</p>
     <span class="read-more">
-      <span>Read review</span>
+      <span>Read post</span>
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
     </span>
   </a>
@@ -128,6 +130,14 @@ permalink: /bookreviews/
   color: #a855f7;
 }
 
+.meta-separator {
+  color: #3f3f46;
+}
+
+.read-time {
+  color: #71717a;
+}
+
 .post-title {
   font-family: 'Outfit', sans-serif;
   font-size: 1.5rem;
@@ -171,6 +181,12 @@ permalink: /bookreviews/
 .animate-in:nth-child(2) { animation-delay: 0.1s; }
 .animate-in:nth-child(3) { animation-delay: 0.15s; }
 .animate-in:nth-child(4) { animation-delay: 0.2s; }
+.animate-in:nth-child(5) { animation-delay: 0.25s; }
+.animate-in:nth-child(6) { animation-delay: 0.3s; }
+.animate-in:nth-child(7) { animation-delay: 0.35s; }
+.animate-in:nth-child(8) { animation-delay: 0.4s; }
+.animate-in:nth-child(9) { animation-delay: 0.45s; }
+.animate-in:nth-child(10) { animation-delay: 0.5s; }
 
 @keyframes fadeUp {
   to {
@@ -179,6 +195,7 @@ permalink: /bookreviews/
   }
 }
 
+/* Mobile */
 @media screen and (max-width: 768px) {
   .page-title {
     font-size: 2rem;

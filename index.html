@@ -1,19 +1,483 @@
 ---
 layout: default
+title: Home
 ---
 
-
-<div class="posts">
-  {% for post in site.posts %}
-    <article class="post">
-
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-
-      <div class="entry">
-        {{ post.excerpt }}
+<section class="about-hero">
+  <div class="hero-content">
+    <div class="terminal-window animate-in">
+      <div class="terminal-header-bar">
+        <div class="terminal-dots">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+        </div>
+        <span class="terminal-title">~/adithya/about.md</span>
       </div>
+      <div class="terminal-body">
+        <p class="line"><span class="prompt-symbol">$</span> <span class="command">cat</span> <span class="arg">intro.txt</span></p>
+        <p class="output intro-text">
+          Hey! I'm <span class="highlight-name">Adithya Iyer</span> — a researcher building the future of video AI at <a href="https://studio.morphic.com/" target="_blank" class="inline-link">Morphic</a>. I help artists create movies with extreme control over video models.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
-  {% endfor %}
-</div>
+<section class="experience-section">
+  <h2 class="section-title"><span class="prefix">//</span> Experience & Journey</h2>
+  
+  <div class="timeline">
+    <div class="timeline-item animate-in">
+      <span class="timeline-date">May 2024 → Present</span>
+      <h3 class="timeline-title">Founding Researcher @ Morphic</h3>
+      <p class="timeline-description">
+        Making Video Models work so artists can make movies quickly and with <em>EXTREME</em> control. Building the future of AI-powered creative tools.
+      </p>
+      <a href="https://studio.morphic.com/" target="_blank" class="timeline-link">studio.morphic.com →</a>
+    </div>
+    
+    <div class="timeline-item animate-in">
+      <span class="timeline-date">2022 → May 2024</span>
+      <h3 class="timeline-title">MS Applied Math & ML @ NYU Courant</h3>
+      <p class="timeline-description">
+        Focused on representation learning at Prof Saining Xie's computer vision lab. Launched <a href="https://arxiv.org/abs/2406.16860" target="_blank">Cambrian-1</a> and worked extensively on Diffusion Model optimization in Jax.
+      </p>
+    </div>
+    
+    <div class="timeline-item animate-in">
+      <span class="timeline-date">Summer 2023</span>
+      <h3 class="timeline-title">Applied Research Intern @ eBay</h3>
+      <p class="timeline-description">
+        Seattle office. Worked on ML applications and experimented with various ML libraries for production systems.
+      </p>
+    </div>
+    
+    <div class="timeline-item animate-in">
+      <span class="timeline-date">2021 → July 2022</span>
+      <h3 class="timeline-title">Consultant @ McKinsey & Co</h3>
+      <p class="timeline-description">
+        Helped banks make more money than they already have. Learned the art of structured problem solving.
+      </p>
+    </div>
+    
+    <div class="timeline-item animate-in">
+      <span class="timeline-date">2017 → 2021</span>
+      <h3 class="timeline-title">B.Tech @ IIT Bombay</h3>
+      <p class="timeline-description">
+        Computational Materials Science research with Prof M.P. Gururajan and Prof Hina Gokhale. Published <a href="https://link.springer.com/article/10.1007/s12046-022-02036-5" target="_blank">a paper</a> and created <a href="https://github.com/adithyaiyer1999/mist" target="_blank">MiST</a> — the first CV-based Python library for binary microstructure analysis.
+      </p>
+      <a href="{{ site.baseurl }}/AdithyaIyer_Thesis.pdf" target="_blank" class="timeline-link">Read my thesis →</a>
+    </div>
+  </div>
+</section>
+
+<section class="highlights-section">
+  <h2 class="section-title"><span class="prefix">//</span> Highlights</h2>
+  
+  <div class="highlights-grid">
+    <div class="highlight-card animate-in">
+      <div class="card-icon">🚀</div>
+      <h3>Cambrian-1</h3>
+      <p>Co-launched a state-of-the-art vision model at NYU.</p>
+      <a href="https://arxiv.org/abs/2406.16860" target="_blank" class="card-link">arXiv →</a>
+    </div>
+    
+    <div class="highlight-card animate-in">
+      <div class="card-icon">🛰️</div>
+      <h3>ESA Copernicus</h3>
+      <p>3rd place in Copernicus Masters University Challenge for agricultural remote sensing.</p>
+      <a href="https://accelerator.copernicus.eu/portfolio/budnip/" target="_blank" class="card-link">Learn more →</a>
+    </div>
+    
+    <div class="highlight-card animate-in">
+      <div class="card-icon">📊</div>
+      <h3>MiST Library</h3>
+      <p>First CV-based Python library for tracking binary microstructures.</p>
+      <a href="https://github.com/adithyaiyer1999/mist" target="_blank" class="card-link">GitHub →</a>
+    </div>
+  </div>
+</section>
+
+<section class="personal-section">
+  <h2 class="section-title"><span class="prefix">//</span> Beyond Code</h2>
+  <div class="personal-grid">
+    <div class="personal-item animate-in">
+      <span class="emoji">⚽</span>
+      <span>Avid FC Barcelona fan</span>
+    </div>
+    <div class="personal-item animate-in">
+      <span class="emoji">✈️</span>
+      <span>15+ countries explored</span>
+    </div>
+    <div class="personal-item animate-in">
+      <span class="emoji">🇪🇺</span>
+      <span>Lived in Europe on exchange</span>
+    </div>
+    <div class="personal-item animate-in">
+      <span class="emoji">📚</span>
+      <span>Voracious reader</span>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section animate-in">
+  <div class="cta-card">
+    <p class="cta-text"><span class="prompt-symbol">$</span> Interested in working on Video AI?</p>
+    <a href="mailto:adithya.iyer@nyu.edu" class="cta-button">
+      <span>Reach out</span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    </a>
+  </div>
+</section>
+
+<style>
+/* Hero Section */
+.about-hero {
+  margin-bottom: 4rem;
+}
+
+.terminal-window {
+  background: var(--bg-card, #16161e);
+  border: 1px solid var(--border-color, #27272a);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.terminal-header-bar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  background: rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.terminal-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.dot.red { background: #ff5f57; }
+.dot.yellow { background: #febc2e; }
+.dot.green { background: #28c840; }
+
+.terminal-title {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: #71717a;
+}
+
+.terminal-body {
+  padding: 1.5rem;
+}
+
+.terminal-body .line {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.prompt-symbol {
+  color: #22d3ee;
+}
+
+.command {
+  color: #a855f7;
+}
+
+.arg {
+  color: #fbbf24;
+}
+
+.output {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: #e4e4e7;
+}
+
+.highlight-name {
+  background: linear-gradient(135deg, #22d3ee, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
+}
+
+.inline-link {
+  color: #22d3ee;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Section Titles */
+.section-title {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.25rem;
+  color: #e4e4e7;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.section-title .prefix {
+  color: #71717a;
+}
+
+/* Timeline */
+.experience-section {
+  margin-bottom: 4rem;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, #22d3ee, #a855f7, #ec4899);
+  border-radius: 9999px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: #16161e;
+  border: 1px solid #27272a;
+  border-radius: 12px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -38px;
+  top: 24px;
+  width: 12px;
+  height: 12px;
+  background: #0a0a0f;
+  border: 2px solid #22d3ee;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.timeline-item:hover {
+  transform: translateX(4px);
+  box-shadow: 0 10px 40px -10px rgba(34, 211, 238, 0.2);
+}
+
+.timeline-date {
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: #22d3ee;
+  background: rgba(34, 211, 238, 0.1);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #e4e4e7;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-description {
+  color: #a1a1aa;
+  margin: 0 0 0.75rem 0;
+}
+
+.timeline-link {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.875rem;
+  color: #a855f7;
+}
+
+.timeline-link:hover {
+  color: #c084fc;
+}
+
+/* Highlights Grid */
+.highlights-section {
+  margin-bottom: 4rem;
+}
+
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.highlight-card {
+  padding: 1.5rem;
+  background: #16161e;
+  border: 1px solid #27272a;
+  border-radius: 12px;
+  transition: all 0.25s ease;
+}
+
+.highlight-card:hover {
+  border-color: #a855f7;
+  box-shadow: 0 10px 40px -10px rgba(168, 85, 247, 0.2);
+}
+
+.card-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.highlight-card h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #e4e4e7;
+  margin-bottom: 0.5rem;
+}
+
+.highlight-card p {
+  color: #a1a1aa;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.card-link {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.875rem;
+  color: #22d3ee;
+}
+
+/* Personal Section */
+.personal-section {
+  margin-bottom: 4rem;
+}
+
+.personal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.personal-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  background: #16161e;
+  border: 1px solid #27272a;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: #a1a1aa;
+  transition: all 0.25s ease;
+}
+
+.personal-item:hover {
+  border-color: #ec4899;
+  color: #e4e4e7;
+}
+
+.personal-item .emoji {
+  font-size: 1.25rem;
+}
+
+/* CTA Section */
+.cta-section {
+  margin-bottom: 2rem;
+}
+
+.cta-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, rgba(34, 211, 238, 0.1), rgba(168, 85, 247, 0.1));
+  border: 1px solid rgba(34, 211, 238, 0.3);
+  border-radius: 16px;
+}
+
+.cta-text {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.125rem;
+  color: #e4e4e7;
+  margin: 0;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.5rem;
+  background: linear-gradient(135deg, #22d3ee, #a855f7);
+  color: #0a0a0f;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+  font-size: 0.875rem;
+  border-radius: 8px;
+  transition: all 0.25s ease;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px -10px rgba(34, 211, 238, 0.5);
+  color: #0a0a0f;
+  text-shadow: none;
+}
+
+/* Animation */
+.animate-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.6s ease forwards;
+}
+
+.animate-in:nth-child(1) { animation-delay: 0.1s; }
+.animate-in:nth-child(2) { animation-delay: 0.2s; }
+.animate-in:nth-child(3) { animation-delay: 0.3s; }
+.animate-in:nth-child(4) { animation-delay: 0.4s; }
+.animate-in:nth-child(5) { animation-delay: 0.5s; }
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+  .output {
+    font-size: 1.1rem;
+  }
+  
+  .cta-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .timeline {
+    padding-left: 1.5rem;
+  }
+  
+  .timeline-item::before {
+    left: -30px;
+  }
+}
+</style>

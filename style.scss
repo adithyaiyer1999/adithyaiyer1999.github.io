@@ -7,283 +7,838 @@
 
 @import "reset";
 @import "variables";
-// Syntax highlighting @import is at the bottom of this file
 
 /**************/
 /* BASE RULES */
 /**************/
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 html {
-  font-size: 100%;
+  font-size: 16px;
+  scroll-behavior: smooth;
 }
 
 body {
-	background: $white;
-  font: 18px/1.4 $helvetica;
-  color: $darkGray;
+  background: $bg-primary;
+  font-family: $font-sans;
+  font-size: $font-base;
+  line-height: 1.7;
+  color: $text-primary;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
 }
 
+// Animated background grid
+.bg-grid {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 50px 50px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.bg-glow {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  background: 
+    radial-gradient(ellipse at 20% 20%, rgba($accent-cyan, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 80%, rgba($accent-purple, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 50%, rgba($accent-pink, 0.03) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+  animation: glow-shift 20s ease-in-out infinite alternate;
+}
+
+@keyframes glow-shift {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(-5%, -5%) scale(1.1); }
+}
+
+// Container
 .container {
   margin: 0 auto;
-  max-width: 740px;
-  padding: 0 10px;
+  max-width: $container-max;
+  padding: 0 $spacing-6;
   width: 100%;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: $helveticaNeue;
-  color: $darkerGray;
-  font-weight: bold;
-
-  line-height: 1.7;
-  margin: 1em 0 15px;
-  padding: 0;
-
+  position: relative;
+  z-index: $z-base;
+  
   @include mobile {
-    line-height: 1.4;
+    padding: 0 $spacing-4;
   }
 }
 
+// Typography
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-sans;
+  font-weight: 600;
+  line-height: 1.3;
+  color: $text-primary;
+  margin: 0 0 $spacing-4;
+}
+
 h1 {
-  font-size: 30px;
-  a {
-    color: inherit;
+  font-size: $font-4xl;
+  font-weight: 700;
+  background: $gradient-primary;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  
+  @include mobile {
+    font-size: $font-3xl;
   }
 }
 
 h2 {
-  font-size: 24px;
+  font-size: $font-2xl;
+  margin-top: $spacing-10;
+  
+  @include mobile {
+    font-size: $font-xl;
+  }
 }
 
 h3 {
-  font-size: 20px;
+  font-size: $font-xl;
+  color: $accent-cyan;
+  
+  @include mobile {
+    font-size: $font-lg;
+  }
 }
 
 h4 {
-  font-size: 18px;
-  color: $gray;
+  font-size: $font-lg;
+  color: $text-secondary;
 }
 
 p {
-  margin: 15px 0;
+  margin: 0 0 $spacing-4;
+  color: $text-secondary;
 }
 
 a {
-  color: $blue;
+  color: $accent-cyan;
   text-decoration: none;
-	cursor: pointer;
-  &:hover, &:active {
-    color: $blue;
+  transition: color $transition-fast, text-shadow $transition-fast;
+  
+  &:hover {
+    color: lighten($accent-cyan, 10%);
+    text-shadow: 0 0 10px rgba($accent-cyan, 0.5);
   }
 }
 
 ul, ol {
-  margin: 15px 0;
-  padding-left: 30px;
+  margin: $spacing-4 0;
+  padding-left: $spacing-6;
+  color: $text-secondary;
 }
 
 ul {
-  list-style-type: disc;
-}
-
-ol {
-  list-style-type: decimal;
-}
-
-ol ul, ul ol, ul ul, ol ol {
-  margin: 0;
-}
-
-ul ul, ol ul {
-  list-style-type: circle;
-}
-
-em, i {
-  font-style: italic;
-}
-
-strong, b {
-  font-weight: bold;
-}
-
-img {
-  max-width: 100%;
-}
-
-// Fixes images in popup boxes from Google Translate
-.gmnoprint img {
-  max-width: none;
-}
-
-.date {
-  font-style: italic;
-  color: $gray;
-}
-
-// Specify the color of the selection
-::-moz-selection {
-  color: $black;
-  background: $lightGray;
-}
-::selection {
-  color: $black;
-  background: $lightGray;
-}
-
-// Nicolas Gallagher's micro clearfix hack
-// http://nicolasgallagher.com/micro-clearfix-hack/
-.clearfix:before,
-.clearfix:after {
-    content: " ";
-    display: table;
-}
-
-.clearfix:after {
-    clear: both;
-}
-
-/*********************/
-/* LAYOUT / SECTIONS */
-/*********************/
-
-//
-// .masthead
-//
-
-.wrapper-masthead {
-  margin-bottom: 50px;
-}
-
-.masthead {
-  padding: 20px 0;
-  border-bottom: 1px solid $lightGray;
-
-  @include mobile {
-    text-align: center;
-  }
-}
-
-.site-avatar {
-  float: left;
-  width: 70px;
-  height: 70px;
-  margin-right: 15px;
-
-  @include mobile {
-    float: none;
-    display: block;
-    margin: 0 auto;
-  }
-
-  img {
-    border-radius: 5px;
-  }
-}
-
-.site-info {
-  float: left;
-
-  @include mobile {
-    float: none;
-    display: block;
-    margin: 0 auto;
-  }
-}
-
-.site-name {
-  margin: 0;
-  color: $darkGray;
-  cursor: pointer;
-  font-family: $helveticaNeue;
-  font-weight: 300;
-  font-size: 28px;
-  letter-spacing: 1px;
-}
-
-.site-description {
-  margin: -5px 0 0 0;
-  color: $gray;
-  font-size: 16px;
-
-  @include mobile {
-    margin: 3px 0;
-  }
-}
-
-nav {
-  float: right;
-  margin-top: 23px; // @TODO: Vertically middle align
-  font-family: $helveticaNeue;
-  font-size: 18px;
-
-  @include mobile {
-    float: none;
-    margin-top: 9px;
-    display: block;
-    font-size: 16px;
-  }
-
-  a {
-    margin-left: 20px;
-    color: $darkGray;
-    text-align: right;
-    font-weight: 300;
-    letter-spacing: 1px;
-
-    @include mobile {
-      margin: 0 10px;
-      color: $blue;
+  list-style-type: none;
+  
+  li {
+    position: relative;
+    padding-left: $spacing-4;
+    margin-bottom: $spacing-2;
+    
+    &::before {
+      content: '>';
+      position: absolute;
+      left: 0;
+      color: $accent-purple;
+      font-family: $font-mono;
+      font-size: $font-sm;
     }
   }
 }
 
-//
-// .main
-//
-
-.posts > .post {
-  padding-bottom: 2em;
-  border-bottom: 1px solid $lightGray;
+ol {
+  list-style-type: none;
+  counter-reset: item;
+  
+  li {
+    position: relative;
+    padding-left: $spacing-6;
+    margin-bottom: $spacing-2;
+    counter-increment: item;
+    
+    &::before {
+      content: counter(item, decimal-leading-zero);
+      position: absolute;
+      left: 0;
+      color: $accent-purple;
+      font-family: $font-mono;
+      font-size: $font-sm;
+      font-weight: 500;
+    }
+  }
 }
 
-.posts > .post:last-child {
-  padding-bottom: 1em;
-  border-bottom: none;
+em, i {
+  font-style: italic;
+  color: $accent-pink;
 }
 
-.post {
-  blockquote {
-    margin: 1.8em .8em;
-    border-left: 2px solid $gray;
-    padding: 0.1em 1em;
-    color: $gray;
-    font-size: 22px;
+strong, b {
+  font-weight: 600;
+  color: $text-primary;
+}
+
+img {
+  max-width: 100%;
+  border-radius: $radius-lg;
+}
+
+code {
+  font-family: $font-mono;
+  font-size: 0.9em;
+  background: $bg-code;
+  color: $accent-cyan;
+  padding: $spacing-1 $spacing-2;
+  border-radius: $radius-sm;
+}
+
+pre {
+  background: $bg-code;
+  border: 1px solid $border-color;
+  border-radius: $radius-lg;
+  padding: $spacing-4;
+  overflow-x: auto;
+  margin: $spacing-6 0;
+  
+  code {
+    background: none;
+    padding: 0;
+  }
+}
+
+blockquote {
+  border-left: 3px solid $accent-purple;
+  background: $bg-secondary;
+  padding: $spacing-4 $spacing-6;
+  margin: $spacing-6 0;
+  border-radius: 0 $radius-md $radius-md 0;
+  
+  p {
+    margin: 0;
     font-style: italic;
-  }
-
-  .comments {
-    margin-top: 10px;
-  }
-
-  .read-more {
-    text-transform: uppercase;
-    font-size: 15px;
+    color: $text-secondary;
   }
 }
 
-.wrapper-footer {
-  margin-top: 50px;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-  background-color: $lightGray;
+hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, $border-color, transparent);
+  margin: $spacing-10 0;
 }
 
-footer {
-  padding: 20px 0;
-  text-align: center;
+::selection {
+  background: rgba($accent-cyan, 0.3);
+  color: $text-primary;
 }
 
-// Settled on moving the import of syntax highlighting to the bottom of the CSS
-// ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
+/**********************/
+/* HEADER / NAVIGATION */
+/**********************/
+
+.terminal-header {
+  position: sticky;
+  top: 0;
+  z-index: $z-sticky;
+  background: rgba($bg-primary, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid $border-subtle;
+  padding: $spacing-4 0;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $spacing-6;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: $spacing-4;
+  text-decoration: none;
+  
+  &:hover {
+    text-shadow: none;
+    
+    .avatar {
+      box-shadow: $shadow-glow-cyan;
+    }
+    
+    .name {
+      text-shadow: 0 0 20px rgba($accent-cyan, 0.5);
+    }
+  }
+}
+
+.avatar-container {
+  position: relative;
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: $radius-full;
+  border: 2px solid $border-color;
+  transition: box-shadow $transition-base, border-color $transition-base;
+  
+  @include mobile {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.status-dot {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  width: 12px;
+  height: 12px;
+  background: $accent-green;
+  border: 2px solid $bg-primary;
+  border-radius: $radius-full;
+  animation: pulse-status 2s ease-in-out infinite;
+}
+
+@keyframes pulse-status {
+  0%, 100% { box-shadow: 0 0 0 0 rgba($accent-green, 0.4); }
+  50% { box-shadow: 0 0 0 6px rgba($accent-green, 0); }
+}
+
+.identity {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.name {
+  font-family: $font-mono;
+  font-size: $font-lg;
+  font-weight: 600;
+  color: $text-primary;
+  background: none;
+  -webkit-text-fill-color: $text-primary;
+  margin: 0;
+  transition: text-shadow $transition-base;
+  
+  .prompt {
+    color: $accent-cyan;
+  }
+  
+  @include mobile {
+    font-size: $font-base;
+  }
+}
+
+.tagline {
+  display: flex;
+  align-items: center;
+  gap: $spacing-1;
+  font-family: $font-mono;
+  font-size: $font-xs;
+  color: $text-muted;
+  margin: 0;
+  
+  @include mobile {
+    display: none;
+  }
+}
+
+.typing-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 14px;
+  background: $accent-cyan;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: $spacing-2;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  
+  li {
+    padding: 0;
+    margin: 0;
+    
+    &::before {
+      display: none;
+    }
+  }
+  
+  @include mobile {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 280px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: $spacing-2;
+    padding: $spacing-20 $spacing-6;
+    background: $bg-secondary;
+    border-left: 1px solid $border-color;
+    transform: translateX(100%);
+    transition: transform $transition-base;
+    z-index: $z-modal;
+    
+    &.active {
+      transform: translateX(0);
+    }
+  }
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: $spacing-2;
+  padding: $spacing-2 $spacing-4;
+  font-family: $font-mono;
+  font-size: $font-sm;
+  font-weight: 500;
+  color: $text-secondary;
+  text-decoration: none;
+  border-radius: $radius-md;
+  transition: all $transition-fast;
+  
+  .nav-icon {
+    color: $text-muted;
+    transition: color $transition-fast;
+  }
+  
+  &:hover, &.active {
+    color: $text-primary;
+    background: $bg-tertiary;
+    text-shadow: none;
+    
+    .nav-icon {
+      color: $accent-cyan;
+    }
+  }
+  
+  &.active {
+    background: rgba($accent-cyan, 0.1);
+    
+    .nav-icon {
+      color: $accent-cyan;
+    }
+  }
+  
+  @include mobile {
+    padding: $spacing-4;
+    font-size: $font-base;
+  }
+}
+
+.mobile-menu-btn {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: $spacing-2;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: $z-modal + 1;
+  
+  span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: $text-secondary;
+    border-radius: $radius-full;
+    transition: all $transition-fast;
+  }
+  
+  &.active {
+    span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+    span:nth-child(2) {
+      opacity: 0;
+    }
+    span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+  }
+  
+  @include mobile {
+    display: flex;
+  }
+}
+
+/****************/
+/* MAIN CONTENT */
+/****************/
+
+.main-content {
+  min-height: calc(100vh - 200px);
+  padding: $spacing-12 0;
+  
+  @include mobile {
+    padding: $spacing-8 0;
+  }
+}
+
+.content-wrapper {
+  animation: fade-up 0.6s ease-out;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// About page styles
+.about-section {
+  margin-bottom: $spacing-12;
+}
+
+.about-intro {
+  font-size: $font-xl;
+  color: $text-primary;
+  line-height: 1.8;
+  margin-bottom: $spacing-8;
+  
+  @include mobile {
+    font-size: $font-lg;
+  }
+}
+
+.timeline {
+  position: relative;
+  padding-left: $spacing-8;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, $accent-cyan, $accent-purple, $accent-pink);
+    border-radius: $radius-full;
+  }
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: $spacing-8;
+  padding: $spacing-6;
+  background: $bg-card;
+  border: 1px solid $border-color;
+  border-radius: $radius-lg;
+  transition: transform $transition-base, box-shadow $transition-base;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    left: -34px;
+    top: 24px;
+    width: 12px;
+    height: 12px;
+    background: $bg-primary;
+    border: 2px solid $accent-cyan;
+    border-radius: $radius-full;
+    z-index: 1;
+  }
+  
+  &:hover {
+    transform: translateX(4px);
+    box-shadow: $shadow-lg, $shadow-glow-cyan;
+  }
+}
+
+.timeline-date {
+  display: inline-block;
+  font-family: $font-mono;
+  font-size: $font-xs;
+  color: $accent-cyan;
+  background: rgba($accent-cyan, 0.1);
+  padding: $spacing-1 $spacing-2;
+  border-radius: $radius-sm;
+  margin-bottom: $spacing-2;
+}
+
+.timeline-title {
+  font-size: $font-lg;
+  font-weight: 600;
+  color: $text-primary;
+  margin-bottom: $spacing-2;
+}
+
+.timeline-description {
+  color: $text-secondary;
+  margin: 0;
+}
+
+// Page styles
+.page {
+  h1 {
+    margin-bottom: $spacing-8;
+    
+    &::after {
+      content: '_';
+      animation: blink 1s step-end infinite;
+    }
+  }
+  
+  .entry {
+    p:first-child {
+      font-size: $font-lg;
+      color: $text-primary;
+      
+      @include mobile {
+        font-size: $font-base;
+      }
+    }
+  }
+}
+
+// Blog list
+.posts {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-6;
+}
+
+.post-card {
+  display: block;
+  padding: $spacing-6;
+  background: $bg-card;
+  border: 1px solid $border-color;
+  border-radius: $radius-lg;
+  text-decoration: none;
+  transition: all $transition-base;
+  
+  &:hover {
+    border-color: $accent-cyan;
+    box-shadow: $shadow-lg, $shadow-glow-cyan;
+    transform: translateY(-2px);
+    
+    .post-title {
+      color: $accent-cyan;
+    }
+    
+    .read-more svg {
+      transform: translateX(4px);
+    }
+  }
+}
+
+.post-meta {
+  display: flex;
+  align-items: center;
+  gap: $spacing-3;
+  margin-bottom: $spacing-3;
+  font-family: $font-mono;
+  font-size: $font-xs;
+  color: $text-muted;
+}
+
+.post-date {
+  color: $accent-purple;
+}
+
+.post-title {
+  font-size: $font-xl;
+  font-weight: 600;
+  color: $text-primary;
+  margin-bottom: $spacing-3;
+  background: none;
+  -webkit-text-fill-color: $text-primary;
+  transition: color $transition-fast;
+  
+  @include mobile {
+    font-size: $font-lg;
+  }
+}
+
+.post-excerpt {
+  color: $text-secondary;
+  margin-bottom: $spacing-4;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.read-more {
+  display: inline-flex;
+  align-items: center;
+  gap: $spacing-2;
+  font-family: $font-mono;
+  font-size: $font-sm;
+  color: $accent-cyan;
+  
+  svg {
+    width: 16px;
+    height: 16px;
+    transition: transform $transition-fast;
+  }
+}
+
+// Single post
+.post {
+  .post-header {
+    margin-bottom: $spacing-8;
+  }
+  
+  h1 {
+    margin-bottom: $spacing-4;
+  }
+  
+  .date {
+    display: inline-flex;
+    align-items: center;
+    gap: $spacing-2;
+    font-family: $font-mono;
+    font-size: $font-sm;
+    color: $text-muted;
+    
+    &::before {
+      content: '//';
+      color: $accent-purple;
+    }
+  }
+  
+  .entry {
+    h2, h3, h4 {
+      margin-top: $spacing-10;
+    }
+    
+    img {
+      margin: $spacing-8 0;
+      box-shadow: $shadow-lg;
+    }
+  }
+}
+
+/**********/
+/* FOOTER */
+/**********/
+
+.terminal-footer {
+  padding: $spacing-10 0;
+  border-top: 1px solid $border-color;
+  background: $bg-secondary;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $spacing-6;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: $spacing-4;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  color: $text-muted;
+  background: $bg-tertiary;
+  border: 1px solid $border-color;
+  border-radius: $radius-full;
+  transition: all $transition-base;
+  
+  &:hover {
+    color: $accent-cyan;
+    border-color: $accent-cyan;
+    box-shadow: $shadow-glow-cyan;
+    transform: translateY(-2px);
+    text-shadow: none;
+  }
+}
+
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $spacing-1;
+}
+
+.copyright, .built-with {
+  font-family: $font-mono;
+  font-size: $font-xs;
+  color: $text-muted;
+  margin: 0;
+  
+  .comment {
+    color: $text-muted;
+    opacity: 0.5;
+  }
+  
+  .heart {
+    color: $accent-pink;
+    animation: heartbeat 1.5s ease-in-out infinite;
+  }
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+// Animation utilities
+.animate-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Syntax highlighting (updated for dark theme)
 @import "highlights";
-@import "svg-icons";

@@ -1,18 +1,40 @@
     <meta charset="utf-8" />
     <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=5.0'>
+    
+    <!-- Theme color for mobile browsers -->
+    <meta name="theme-color" content="#0a0a0f">
+    <meta name="msapplication-TileColor" content="#0a0a0f">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>">
 
     {% if page.excerpt %}
-    <meta name="description" content="{{ page.excerpt| strip_html }}" />
-    <meta property="og:description" content="{{ page.excerpt| strip_html }}" />
+    <meta name="description" content="{{ page.excerpt | strip_html | truncate: 160 }}" />
+    <meta property="og:description" content="{{ page.excerpt | strip_html | truncate: 160 }}" />
     {% else %}
     <meta name="description" content="{{ site.description }}">
     <meta property="og:description" content="{{ site.description }}" />
     {% endif %}
+    
     <meta name="author" content="{{ site.name }}" />
+    <meta name="keywords" content="Adithya Iyer, Machine Learning, AI, Video AI, Morphic, NYU, IIT Bombay, Research">
 
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+    <meta property="og:site_name" content="{{ site.name }}" />
+    <meta property="og:image" content="{{ site.avatar }}" />
+    
     {% if page.title %}
-    <meta property="og:title" content="{{ page.title }}" />
-    <meta property="twitter:title" content="{{ page.title }}" />
+    <meta property="og:title" content="{{ page.title }} | {{ site.name }}" />
+    <meta property="twitter:title" content="{{ page.title }} | {{ site.name }}" />
+    {% else %}
+    <meta property="og:title" content="{{ site.name }}" />
+    <meta property="twitter:title" content="{{ site.name }}" />
     {% endif %}
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:image" content="{{ site.avatar }}" />
