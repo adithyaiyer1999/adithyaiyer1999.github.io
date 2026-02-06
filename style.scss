@@ -17,54 +17,28 @@
 }
 
 html {
-  font-size: 16px;
+  font-size: 15px;
   scroll-behavior: smooth;
 }
 
 body {
   background: $bg-primary;
   font-family: $font-sans;
-  font-size: $font-base;
-  line-height: 1.7;
+  font-size: $font-sm;
+  line-height: 1.65;
   color: $text-primary;
   min-height: 100vh;
   position: relative;
   overflow-x: hidden;
 }
 
-// Animated background grid
+// Simple background (VS Code style - no fancy effects)
 .bg-grid {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: 
-    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
-  background-size: 50px 50px;
-  pointer-events: none;
-  z-index: 0;
+  display: none;
 }
 
 .bg-glow {
-  position: fixed;
-  top: -50%;
-  left: -50%;
-  right: -50%;
-  bottom: -50%;
-  background: 
-    radial-gradient(ellipse at 20% 20%, rgba($accent-cyan, 0.08) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 80%, rgba($accent-purple, 0.08) 0%, transparent 50%),
-    radial-gradient(ellipse at 50% 50%, rgba($accent-pink, 0.03) 0%, transparent 70%);
-  pointer-events: none;
-  z-index: 0;
-  animation: glow-shift 20s ease-in-out infinite alternate;
-}
-
-@keyframes glow-shift {
-  0% { transform: translate(0, 0) scale(1); }
-  100% { transform: translate(-5%, -5%) scale(1.1); }
+  display: none;
 }
 
 // Container
@@ -91,54 +65,52 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: $font-4xl;
-  font-weight: 700;
-  background: $gradient-primary;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  
-  @include mobile {
-    font-size: $font-3xl;
-  }
-}
-
-h2 {
   font-size: $font-2xl;
-  margin-top: $spacing-10;
+  font-weight: 600;
+  color: $text-primary;
   
   @include mobile {
     font-size: $font-xl;
   }
 }
 
-h3 {
+h2 {
   font-size: $font-xl;
-  color: $accent-cyan;
+  margin-top: $spacing-8;
   
   @include mobile {
     font-size: $font-lg;
   }
 }
 
-h4 {
+h3 {
   font-size: $font-lg;
+  color: $accent-cyan;
+  font-weight: 600;
+  
+  @include mobile {
+    font-size: $font-base;
+  }
+}
+
+h4 {
+  font-size: $font-base;
   color: $text-secondary;
 }
 
 p {
   margin: 0 0 $spacing-4;
-  color: $text-secondary;
+  color: $text-primary;
 }
 
 a {
   color: $accent-cyan;
   text-decoration: none;
-  transition: color $transition-fast, text-shadow $transition-fast;
+  transition: color $transition-fast;
   
   &:hover {
-    color: lighten($accent-cyan, 10%);
-    text-shadow: 0 0 10px rgba($accent-cyan, 0.5);
+    color: lighten($accent-cyan, 15%);
+    text-decoration: underline;
   }
 }
 
@@ -149,49 +121,23 @@ ul, ol {
 }
 
 ul {
-  list-style-type: none;
+  list-style-type: disc;
   
   li {
-    position: relative;
-    padding-left: $spacing-4;
     margin-bottom: $spacing-2;
-    
-    &::before {
-      content: '>';
-      position: absolute;
-      left: 0;
-      color: $accent-purple;
-      font-family: $font-mono;
-      font-size: $font-sm;
-    }
   }
 }
 
 ol {
-  list-style-type: none;
-  counter-reset: item;
+  list-style-type: decimal;
   
   li {
-    position: relative;
-    padding-left: $spacing-6;
     margin-bottom: $spacing-2;
-    counter-increment: item;
-    
-    &::before {
-      content: counter(item, decimal-leading-zero);
-      position: absolute;
-      left: 0;
-      color: $accent-purple;
-      font-family: $font-mono;
-      font-size: $font-sm;
-      font-weight: 500;
-    }
   }
 }
 
 em, i {
   font-style: italic;
-  color: $accent-pink;
 }
 
 strong, b {
@@ -261,11 +207,9 @@ hr {
   position: sticky;
   top: 0;
   z-index: $z-sticky;
-  background: rgba($bg-primary, 0.8);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid $border-subtle;
-  padding: $spacing-4 0;
+  background: $bg-secondary;
+  border-bottom: 1px solid $border-color;
+  padding: $spacing-3 0;
 }
 
 .header-content {
@@ -278,18 +222,12 @@ hr {
 .logo-section {
   display: flex;
   align-items: center;
-  gap: $spacing-4;
+  gap: $spacing-3;
   text-decoration: none;
   
   &:hover {
-    text-shadow: none;
-    
-    .avatar {
-      box-shadow: $shadow-glow-cyan;
-    }
-    
     .name {
-      text-shadow: 0 0 20px rgba($accent-cyan, 0.5);
+      color: $accent-cyan;
     }
   }
 }
@@ -299,33 +237,19 @@ hr {
 }
 
 .avatar {
-  width: 48px;
-  height: 48px;
-  border-radius: $radius-full;
-  border: 2px solid $border-color;
-  transition: box-shadow $transition-base, border-color $transition-base;
+  width: 32px;
+  height: 32px;
+  border-radius: $radius-sm;
+  border: 1px solid $border-color;
   
   @include mobile {
-    width: 40px;
-    height: 40px;
+    width: 28px;
+    height: 28px;
   }
 }
 
 .status-dot {
-  position: absolute;
-  bottom: 2px;
-  right: 2px;
-  width: 12px;
-  height: 12px;
-  background: $accent-green;
-  border: 2px solid $bg-primary;
-  border-radius: $radius-full;
-  animation: pulse-status 2s ease-in-out infinite;
-}
-
-@keyframes pulse-status {
-  0%, 100% { box-shadow: 0 0 0 0 rgba($accent-green, 0.4); }
-  50% { box-shadow: 0 0 0 6px rgba($accent-green, 0); }
+  display: none;
 }
 
 .identity {
@@ -335,49 +259,28 @@ hr {
 }
 
 .name {
-  font-family: $font-mono;
-  font-size: $font-lg;
+  font-family: $font-sans;
+  font-size: $font-sm;
   font-weight: 600;
   color: $text-primary;
-  background: none;
-  -webkit-text-fill-color: $text-primary;
   margin: 0;
-  transition: text-shadow $transition-base;
+  transition: color $transition-fast;
   
   .prompt {
-    color: $accent-cyan;
+    display: none;
   }
   
   @include mobile {
-    font-size: $font-base;
+    font-size: $font-xs;
   }
 }
 
 .tagline {
-  display: flex;
-  align-items: center;
-  gap: $spacing-1;
-  font-family: $font-mono;
-  font-size: $font-xs;
-  color: $text-muted;
-  margin: 0;
-  
-  @include mobile {
-    display: none;
-  }
+  display: none;
 }
 
 .typing-cursor {
-  display: inline-block;
-  width: 2px;
-  height: 14px;
-  background: $accent-cyan;
-  animation: blink 1s step-end infinite;
-}
-
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
+  display: none;
 }
 
 .main-nav {
@@ -427,42 +330,35 @@ hr {
 .nav-link {
   display: flex;
   align-items: center;
-  gap: $spacing-2;
-  padding: $spacing-2 $spacing-4;
-  font-family: $font-mono;
-  font-size: $font-sm;
+  gap: $spacing-1;
+  padding: $spacing-2 $spacing-3;
+  font-family: $font-sans;
+  font-size: $font-xs;
   font-weight: 500;
-  color: $text-secondary;
+  color: $text-muted;
   text-decoration: none;
-  border-radius: $radius-md;
+  border-radius: $radius-sm;
   transition: all $transition-fast;
   
   .nav-icon {
-    color: $text-muted;
-    transition: color $transition-fast;
+    display: none;
   }
   
-  &:hover, &.active {
+  &:hover {
     color: $text-primary;
     background: $bg-tertiary;
-    text-shadow: none;
-    
-    .nav-icon {
-      color: $accent-cyan;
-    }
   }
   
   &.active {
-    background: rgba($accent-cyan, 0.1);
-    
-    .nav-icon {
-      color: $accent-cyan;
-    }
+    color: $text-primary;
+    background: $bg-tertiary;
+    border-bottom: 2px solid $accent-blue;
+    border-radius: 0;
   }
   
   @include mobile {
-    padding: $spacing-4;
-    font-size: $font-base;
+    padding: $spacing-3;
+    font-size: $font-sm;
   }
 }
 
@@ -682,22 +578,23 @@ hr {
 }
 
 .post-title {
-  font-size: $font-xl;
+  font-size: $font-lg;
   font-weight: 600;
   color: $text-primary;
-  margin-bottom: $spacing-3;
+  margin-bottom: $spacing-2;
   background: none;
   -webkit-text-fill-color: $text-primary;
   transition: color $transition-fast;
   
   @include mobile {
-    font-size: $font-lg;
+    font-size: $font-base;
   }
 }
 
 .post-excerpt {
-  color: $text-secondary;
-  margin-bottom: $spacing-4;
+  color: $text-primary;
+  font-size: $font-sm;
+  margin-bottom: $spacing-3;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
@@ -760,7 +657,7 @@ hr {
 /**********/
 
 .terminal-footer {
-  padding: $spacing-10 0;
+  padding: $spacing-6 0;
   border-top: 1px solid $border-color;
   background: $bg-secondary;
 }
@@ -782,20 +679,15 @@ hr {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
+  width: 32px;
+  height: 32px;
   color: $text-muted;
-  background: $bg-tertiary;
-  border: 1px solid $border-color;
-  border-radius: $radius-full;
-  transition: all $transition-base;
+  border-radius: $radius-sm;
+  transition: all $transition-fast;
   
   &:hover {
-    color: $accent-cyan;
-    border-color: $accent-cyan;
-    box-shadow: $shadow-glow-cyan;
-    transform: translateY(-2px);
-    text-shadow: none;
+    color: $text-primary;
+    background: $bg-tertiary;
   }
 }
 
@@ -807,25 +699,18 @@ hr {
 }
 
 .copyright, .built-with {
-  font-family: $font-mono;
+  font-family: $font-sans;
   font-size: $font-xs;
   color: $text-muted;
   margin: 0;
   
   .comment {
-    color: $text-muted;
-    opacity: 0.5;
+    display: none;
   }
   
   .heart {
-    color: $accent-pink;
-    animation: heartbeat 1.5s ease-in-out infinite;
+    color: #e45649;
   }
-}
-
-@keyframes heartbeat {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.1); }
 }
 
 // Animation utilities

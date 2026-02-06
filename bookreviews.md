@@ -5,191 +5,92 @@ permalink: /bookreviews/
 ---
 
 <div class="blog-header">
-  <h1 class="page-title">
-    <span class="title-prefix">~/book-reviews</span>
-    <span class="cursor">_</span>
-  </h1>
+  <h1 class="page-title">Book Reviews</h1>
   <p class="page-subtitle">Thoughts on books I've read</p>
 </div>
 
 <div class="posts">
   {% for post in site.bookreviews %}
-  <a href="{{ site.baseurl }}{{ post.url }}" class="post-card animate-in">
+  <a href="{{ site.baseurl }}{{ post.url }}" class="post-card">
     <div class="post-meta">
       <span class="post-date">{{ post.date | date: "%b %d, %Y" }}</span>
     </div>
     <h2 class="post-title">{{ post.title }}</h2>
-    <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 200 }}</p>
-    <span class="read-more">
-      <span>Read review</span>
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-    </span>
+    <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 160 }}</p>
   </a>
   {% endfor %}
 </div>
 
 <style>
 .blog-header {
-  margin-bottom: 3rem;
-  text-align: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #3c3c3c;
 }
 
 .page-title {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-  display: inline-flex;
-  align-items: center;
-}
-
-.title-prefix {
-  background: linear-gradient(135deg, #22d3ee, #a855f7);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.cursor {
-  color: #22d3ee;
-  animation: blink 1s step-end infinite;
-}
-
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #d4d4d4;
+  margin-bottom: 0.25rem;
 }
 
 .page-subtitle {
-  font-size: 1.125rem;
-  color: #71717a;
+  font-size: 0.8rem;
+  color: #858585;
   margin: 0;
 }
 
 .posts {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
 }
 
 .post-card {
   display: block;
-  padding: 2rem;
-  background: #16161e;
-  border: 1px solid #27272a;
-  border-radius: 16px;
+  padding: 1rem 0;
+  border-bottom: 1px solid #3c3c3c;
   text-decoration: none;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.post-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, #22d3ee, #a855f7, #ec4899);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.3s ease;
+  transition: background 0.15s ease;
 }
 
 .post-card:hover {
-  border-color: rgba(34, 211, 238, 0.5);
-  box-shadow: 0 20px 40px -15px rgba(34, 211, 238, 0.15);
-  transform: translateY(-4px);
-}
-
-.post-card:hover::before {
-  transform: scaleX(1);
+  background: #252526;
+  margin: 0 -1rem;
+  padding: 1rem;
 }
 
 .post-card:hover .post-title {
-  color: #22d3ee;
-}
-
-.post-card:hover .read-more svg {
-  transform: translateX(4px);
+  color: #4fc1ff;
 }
 
 .post-meta {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 1rem;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.8rem;
-}
-
-.post-date {
-  color: #a855f7;
+  margin-bottom: 0.35rem;
+  font-size: 0.7rem;
+  color: #858585;
 }
 
 .post-title {
   font-family: 'Outfit', sans-serif;
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #e4e4e7;
-  margin-bottom: 0.75rem;
-  background: none;
-  -webkit-text-fill-color: #e4e4e7;
-  transition: color 0.2s ease;
-  line-height: 1.4;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #d4d4d4;
+  margin-bottom: 0.35rem;
+  transition: color 0.15s ease;
 }
 
 .post-excerpt {
-  color: #a1a1aa;
-  font-size: 1rem;
-  line-height: 1.7;
-  margin-bottom: 1rem;
-}
-
-.read-more {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.875rem;
-  color: #22d3ee;
-}
-
-.read-more svg {
-  transition: transform 0.2s ease;
-}
-
-/* Animation */
-.animate-in {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeUp 0.5s ease forwards;
-}
-
-.animate-in:nth-child(1) { animation-delay: 0.05s; }
-.animate-in:nth-child(2) { animation-delay: 0.1s; }
-.animate-in:nth-child(3) { animation-delay: 0.15s; }
-.animate-in:nth-child(4) { animation-delay: 0.2s; }
-
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  color: #858585;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  margin: 0;
 }
 
 @media screen and (max-width: 768px) {
-  .page-title {
-    font-size: 2rem;
-  }
-  
-  .post-card {
-    padding: 1.5rem;
-  }
-  
-  .post-title {
-    font-size: 1.25rem;
+  .post-card:hover {
+    margin: 0;
+    padding: 1rem 0;
   }
 }
 </style>
