@@ -3,233 +3,52 @@ layout: default
 title: Home
 ---
 
-<div class="vscode-editor">
-  <!-- Tab bar -->
-  <div class="editor-tabs">
-    <div class="tab active">
-      <span class="tab-icon">📄</span>
-      <span class="tab-name">about.md</span>
-      <span class="tab-close">×</span>
-    </div>
-  </div>
-  
-  <!-- Editor content -->
-  <div class="editor-content">
-    <div class="line-numbers">
-      <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span><span>17</span><span>18</span><span>19</span><span>20</span><span>21</span><span>22</span><span>23</span>
-    </div>
-    <div class="code-content">
-      <p class="line"><span class="comment"># About Me</span></p>
-      <p class="line">&nbsp;</p>
-      <p class="line"><span class="key">name</span><span class="punct">:</span> <span class="string">"Adithya Iyer"</span></p>
-      <p class="line"><span class="key">role</span><span class="punct">:</span> <span class="string">"Founding Researcher @ <a href="https://studio.morphic.com/" target="_blank">Morphic</a>"</span></p>
-      <p class="line"><span class="key">focus</span><span class="punct">:</span> <span class="string">"Video AI • Diffusion Models • Computer Vision"</span></p>
-      <p class="line">&nbsp;</p>
-      <p class="line"><span class="comment"># Experience</span></p>
-      <p class="line">&nbsp;</p>
-      <p class="line"><span class="key">2024-now</span><span class="punct">:</span> <span class="string">"Morphic — Making video models work for artists"</span></p>
-      <p class="line"><span class="key">2022-2024</span><span class="punct">:</span> <span class="string">"NYU Courant — MS Applied Math & ML, launched <a href="https://arxiv.org/abs/2406.16860" target="_blank">Cambrian-1</a>"</span></p>
-      <p class="line"><span class="key">2023</span><span class="punct">:</span> <span class="string">"eBay — Applied Research Intern, Seattle"</span></p>
-      <p class="line"><span class="key">2021-2022</span><span class="punct">:</span> <span class="string">"McKinsey & Co — Consultant"</span></p>
-      <p class="line"><span class="key">2017-2021</span><span class="punct">:</span> <span class="string">"IIT Bombay — B.Tech, created <a href="https://github.com/adithyaiyer1999/mist" target="_blank">MiST</a> library"</span></p>
-      <p class="line">&nbsp;</p>
-      <p class="line"><span class="comment"># Highlights</span></p>
-      <p class="line">&nbsp;</p>
-      <p class="line"><span class="punct">-</span> <span class="value">Somehow survived a full marathon</span></p>
-      <p class="line"><span class="punct">-</span> <span class="value">3rd place ESA Copernicus Masters University Challenge</span></p>
-      <p class="line"><span class="punct">-</span> <span class="value">First CV-based Python library for microstructure analysis</span></p>
-      <p class="line">&nbsp;</p>
-      <p class="line"><span class="comment"># Links</span></p>
-      <p class="line">&nbsp;</p>
-      <p class="line"><span class="key">email</span><span class="punct">:</span> <a href="mailto:adithyaiyer1999@gmail.com" class="string">"adithyaiyer1999@gmail.com"</a></p>
-    </div>
-  </div>
-  
-  <!-- Status bar -->
-  <div class="status-bar">
-    <div class="status-left">
-      <span class="status-item"><span class="branch-icon">⎇</span> main</span>
-    </div>
-    <div class="status-right">
-      <span class="status-item">UTF-8</span>
-      <span class="status-item">Markdown</span>
-      <span class="status-item">Ln 1, Col 1</span>
-    </div>
-  </div>
+<div class="about-intro">
+  <h1>Adithya Iyer</h1>
+  <p class="role">Member of Technical Staff @ <a href="https://amilabs.xyz/" target="_blank">AMI</a></p>
+  <p class="focus">Video AI · Diffusion Models · Computer Vision</p>
 </div>
 
-<style>
-.vscode-editor {
-  background: #1e1e1e;
-  border: 1px solid #3c3c3c;
-  border-radius: 8px;
-  overflow: hidden;
-  font-family: 'JetBrains Mono', 'Consolas', 'Monaco', monospace;
-  font-size: 0.8rem;
-  line-height: 1.5;
-}
+<section>
+  <h2>Experience</h2>
+  <div class="timeline">
+    <div class="timeline-item">
+      <span class="timeline-date">2026 — now</span>
+      <p class="timeline-title">AMI (Advanced Machine Intelligence) — Member of Technical Staff</p>
+    </div>
+    <div class="timeline-item">
+      <span class="timeline-date">2024 — 2026</span>
+      <p class="timeline-title">Morphic — Founding Researcher, making video models work for artists</p>
+    </div>
+    <div class="timeline-item">
+      <span class="timeline-date">2022 — 2024</span>
+      <p class="timeline-title">NYU Courant — MS Applied Math &amp; ML, launched <a href="https://arxiv.org/abs/2406.16860" target="_blank">Cambrian-1</a></p>
+    </div>
+    <div class="timeline-item">
+      <span class="timeline-date">2023</span>
+      <p class="timeline-title">eBay — Applied Research Intern, Seattle</p>
+    </div>
+    <div class="timeline-item">
+      <span class="timeline-date">2021 — 2022</span>
+      <p class="timeline-title">McKinsey &amp; Co — Consultant</p>
+    </div>
+    <div class="timeline-item">
+      <span class="timeline-date">2017 — 2021</span>
+      <p class="timeline-title">IIT Bombay — B.Tech, created <a href="https://github.com/adithyaiyer1999/mist" target="_blank">MiST</a> library</p>
+    </div>
+  </div>
+</section>
 
-/* Tab bar */
-.editor-tabs {
-  display: flex;
-  background: #252526;
-  border-bottom: 1px solid #3c3c3c;
-  padding: 0;
-}
+<section>
+  <h2>Highlights</h2>
+  <ul class="highlights">
+    <li>Somehow survived a full marathon</li>
+    <li>3rd place, ESA Copernicus Masters University Challenge</li>
+    <li>First CV-based Python library for microstructure analysis</li>
+  </ul>
+</section>
 
-.tab {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  padding: 8px 12px;
-  background: #1e1e1e;
-  border-right: 1px solid #3c3c3c;
-  color: #cccccc;
-  font-size: 0.75rem;
-}
-
-.tab.active {
-  background: #1e1e1e;
-  border-top: 1px solid #007acc;
-  margin-top: -1px;
-}
-
-.tab-icon {
-  font-size: 0.85rem;
-}
-
-.tab-close {
-  opacity: 0.5;
-  cursor: pointer;
-  font-size: 1rem;
-  line-height: 1;
-}
-
-.tab-close:hover {
-  opacity: 1;
-}
-
-/* Editor content */
-.editor-content {
-  display: flex;
-  padding: 12px 0;
-  min-height: auto;
-}
-
-.line-numbers {
-  display: flex;
-  flex-direction: column;
-  padding: 0 12px;
-  text-align: right;
-  color: #858585;
-  user-select: none;
-  border-right: 1px solid #3c3c3c;
-  font-size: 0.75rem;
-}
-
-.line-numbers span {
-  line-height: 1.5;
-}
-
-.code-content {
-  flex: 1;
-  padding: 0 16px;
-}
-
-.code-content .line {
-  margin: 0;
-  line-height: 1.5;
-  white-space: nowrap;
-}
-
-/* Syntax colors - VS Code Dark+ theme */
-.comment {
-  color: #6a9955;
-}
-
-.key {
-  color: #9cdcfe;
-}
-
-.punct {
-  color: #cccccc;
-}
-
-.string {
-  color: #ce9178;
-}
-
-.string a {
-  color: #ce9178;
-  text-decoration: underline;
-  text-decoration-color: #ce9178;
-}
-
-.string a:hover {
-  color: #e9b89a;
-  text-shadow: none;
-}
-
-.value {
-  color: #d4d4d4;
-}
-
-.code-content a {
-  color: #4fc1ff;
-  text-decoration: none;
-}
-
-.code-content a:hover {
-  text-decoration: underline;
-  text-shadow: none;
-}
-
-/* Status bar */
-.status-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 3px 10px;
-  background: #007acc;
-  color: #ffffff;
-  font-size: 0.7rem;
-}
-
-.status-left,
-.status-right {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.status-item {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-
-.branch-icon {
-  font-size: 0.8rem;
-}
-
-/* Mobile */
-@media screen and (max-width: 768px) {
-  .vscode-editor {
-    font-size: 0.7rem;
-  }
-  
-  .line-numbers {
-    padding: 0 8px;
-    font-size: 0.65rem;
-  }
-  
-  .code-content {
-    padding: 0 10px;
-    overflow-x: auto;
-  }
-  
-  .status-bar {
-    font-size: 0.6rem;
-  }
-}
-</style>
+<section>
+  <h2>Get in touch</h2>
+  <p><a href="mailto:adithyaiyer1999@gmail.com">adithyaiyer1999@gmail.com</a></p>
+</section>

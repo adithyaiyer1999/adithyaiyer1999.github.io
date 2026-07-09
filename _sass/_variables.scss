@@ -1,58 +1,44 @@
 //
-// VARIABLES - Modern Code Theme
+// VARIABLES - Plain, classy editorial theme
 //
 
-// Core dark theme colors (VS Code inspired)
-$bg-primary: #1e1e1e;
-$bg-secondary: #252526;
-$bg-tertiary: #2d2d2d;
-$bg-card: #252526;
-$bg-code: #1e1e1e;
+// Core palette (warm paper light theme)
+$bg-primary: #faf9f5;
+$bg-secondary: #f2f0e8;
+$bg-tertiary: #eae7db;
+$bg-card: #ffffff;
+$bg-code: #f4f2ea;
 
-// Text colors (VS Code style)
-$text-primary: #d4d4d4;
-$text-secondary: #cccccc;
-$text-muted: #858585;
+// Text colors
+$text-primary: #201f1b;
+$text-secondary: #4b483f;
+$text-muted: #8a8577;
 
-// Accent colors (VS Code inspired)
-$accent-cyan: #4fc1ff;
-$accent-purple: #c586c0;
-$accent-pink: #c586c0;
-$accent-green: #6a9955;
-$accent-orange: #ce9178;
-$accent-blue: #007acc;
-$accent-yellow: #dcdcaa;
-
-// Gradients (more subtle)
-$gradient-primary: linear-gradient(135deg, $accent-blue 0%, $accent-cyan 100%);
-$gradient-secondary: linear-gradient(135deg, $accent-purple 0%, $accent-cyan 100%);
-$gradient-glow: radial-gradient(ellipse at 50% 0%, rgba($accent-blue, 0.08) 0%, transparent 70%);
+// Accent (single restrained accent, used sparingly)
+$accent: #35594a;
+$accent-dark: #24402f;
 
 // Borders
-$border-color: #3c3c3c;
-$border-subtle: rgba(255, 255, 255, 0.05);
+$border-color: #e2ddcd;
+$border-strong: #cdc6b0;
 
-// Shadows (more subtle)
-$shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
-$shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
-$shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
-$shadow-glow-cyan: 0 0 8px rgba($accent-blue, 0.2);
-$shadow-glow-purple: 0 0 8px rgba($accent-purple, 0.2);
+// Shadows (very subtle, no glow)
+$shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
+$shadow-md: 0 2px 8px rgba(0, 0, 0, 0.06);
 
 // Font stacks
-$font-mono: 'JetBrains Mono', 'Fira Code', 'Monaco', 'Consolas', monospace;
-$font-sans: 'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+$font-serif: 'Newsreader', Georgia, 'Times New Roman', serif;
+$font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+$font-mono: 'JetBrains Mono', 'SFMono-Regular', Consolas, monospace;
 
 // Font sizes
-$font-xs: 0.75rem;
-$font-sm: 0.875rem;
+$font-xs: 0.78rem;
+$font-sm: 0.9rem;
 $font-base: 1rem;
-$font-lg: 1.125rem;
-$font-xl: 1.25rem;
-$font-2xl: 1.5rem;
-$font-3xl: 1.875rem;
-$font-4xl: 2.25rem;
-$font-5xl: 3rem;
+$font-lg: 1.15rem;
+$font-xl: 1.4rem;
+$font-2xl: 1.8rem;
+$font-3xl: 2.2rem;
 
 // Spacing
 $spacing-1: 0.25rem;
@@ -69,27 +55,22 @@ $spacing-20: 5rem;
 
 // Border radius
 $radius-sm: 4px;
-$radius-md: 8px;
-$radius-lg: 12px;
-$radius-xl: 16px;
-$radius-2xl: 24px;
+$radius-md: 6px;
+$radius-lg: 8px;
 $radius-full: 9999px;
 
 // Transitions
 $transition-fast: 150ms ease;
-$transition-base: 250ms ease;
-$transition-slow: 350ms ease;
-$transition-spring: 500ms cubic-bezier(0.34, 1.56, 0.64, 1);
+$transition-base: 200ms ease;
 
 // Z-index
 $z-base: 1;
-$z-dropdown: 10;
 $z-sticky: 100;
 $z-modal: 1000;
 
 // Container
-$container-max: 900px;
-$container-wide: 1200px;
+$container-max: 700px;
+$container-wide: 760px;
 
 // Breakpoints
 @mixin mobile {
